@@ -1,0 +1,41 @@
+[
+  {
+    "id": "s001",
+    "date": "2026-06-10",
+    "time": "19:00",
+    "broadcaster_id": "b001",
+    "product_ids": [
+      "p001",
+      "p002",
+      "p003",
+      "p004"
+    ],
+    "avg_viewers": 80000
+  },
+  {
+    "id": "s002",
+    "date": "2026-06-15",
+    "time": "20:00",
+    "broadcaster_id": "b002",
+    "product_ids": [
+      "p005",
+      "p006",
+      "p007",
+      "p008"
+    ],
+    "avg_viewers": 50000
+  },
+  {
+    "id": "s003",
+    "date": "2026-06-20",
+    "time": "19:30",
+    "broadcaster_id": "b003",
+    "product_ids": [
+      "p009",
+      "p010",
+      "p011",
+      "p012"
+    ],
+    "avg_viewers": 120000
+  }
+]

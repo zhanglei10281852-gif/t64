@@ -1,0 +1,47 @@
+[
+  {
+    "id": "b001",
+    "name": "林小美",
+    "fans_count": 1250000,
+    "category": "美妆",
+    "base_fee": 8000,
+    "commission_rate": 20,
+    "max_products": 15
+  },
+  {
+    "id": "b002",
+    "name": "张大厨",
+    "fans_count": 890000,
+    "category": "食品",
+    "base_fee": 5000,
+    "commission_rate": 15,
+    "max_products": 20
+  },
+  {
+    "id": "b003",
+    "name": "时尚依依",
+    "fans_count": 2100000,
+    "category": "服饰",
+    "base_fee": 12000,
+    "commission_rate": 25,
+    "max_products": 12
+  },
+  {
+    "id": "b004",
+    "name": "居家老王",
+    "fans_count": 560000,
+    "category": "家居",
+    "base_fee": 3500,
+    "commission_rate": 18,
+    "max_products": 25
+  },
+  {
+    "id": "b005",
+    "name": "科技阿杰",
+    "fans_count": 3200000,
+    "category": "数码",
+    "base_fee": 15000,
+    "commission_rate": 10,
+    "max_products": 10
+  }
+]

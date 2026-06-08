@@ -1,0 +1,202 @@
+[
+  {
+    "id": "p001",
+    "name": "水润保湿精华液",
+    "brand": "美肌堂",
+    "category": "美妆",
+    "supply_price": 45,
+    "live_price": 89,
+    "commission_rate": 25,
+    "stock": 5000
+  },
+  {
+    "id": "p002",
+    "name": "丝绒哑光口红套装",
+    "brand": "彩韵",
+    "category": "美妆",
+    "supply_price": 68,
+    "live_price": 128,
+    "commission_rate": 30,
+    "stock": 3000
+  },
+  {
+    "id": "p003",
+    "name": "氨基酸洁面慕斯",
+    "brand": "清颜",
+    "category": "美妆",
+    "supply_price": 28,
+    "live_price": 59,
+    "commission_rate": 22,
+    "stock": 8000
+  },
+  {
+    "id": "p004",
+    "name": "烟酰胺美白面膜",
+    "brand": "玉肌",
+    "category": "美妆",
+    "supply_price": 35,
+    "live_price": 79,
+    "commission_rate": 28,
+    "stock": 6000
+  },
+  {
+    "id": "p005",
+    "name": "坚果大礼包",
+    "brand": "味滋园",
+    "category": "食品",
+    "supply_price": 42,
+    "live_price": 79,
+    "commission_rate": 18,
+    "stock": 10000
+  },
+  {
+    "id": "p006",
+    "name": "手工蛋黄酥",
+    "brand": "酥香坊",
+    "category": "食品",
+    "supply_price": 25,
+    "live_price": 49,
+    "commission_rate": 20,
+    "stock": 5000
+  },
+  {
+    "id": "p007",
+    "name": "新疆灰枣礼盒",
+    "brand": "枣源",
+    "category": "食品",
+    "supply_price": 38,
+    "live_price": 69,
+    "commission_rate": 15,
+    "stock": 4000
+  },
+  {
+    "id": "p008",
+    "name": "即食燕窝",
+    "brand": "燕之堂",
+    "category": "食品",
+    "supply_price": 120,
+    "live_price": 238,
+    "commission_rate": 25,
+    "stock": 2000
+  },
+  {
+    "id": "p009",
+    "name": "真丝连衣裙",
+    "brand": "锦裳",
+    "category": "服饰",
+    "supply_price": 180,
+    "live_price": 359,
+    "commission_rate": 22,
+    "stock": 800
+  },
+  {
+    "id": "p010",
+    "name": "高腰阔腿牛仔裤",
+    "brand": "丹宁风",
+    "category": "服饰",
+    "supply_price": 75,
+    "live_price": 159,
+    "commission_rate": 20,
+    "stock": 2000
+  },
+  {
+    "id": "p011",
+    "name": "羊毛针织开衫",
+    "brand": "暖织",
+    "category": "服饰",
+    "supply_price": 95,
+    "live_price": 199,
+    "commission_rate": 25,
+    "stock": 1500
+  },
+  {
+    "id": "p012",
+    "name": "运动休闲套装",
+    "brand": "悦动",
+    "category": "服饰",
+    "supply_price": 68,
+    "live_price": 139,
+    "commission_rate": 18,
+    "stock": 3000
+  },
+  {
+    "id": "p013",
+    "name": "记忆棉枕头",
+    "brand": "眠舒",
+    "category": "家居",
+    "supply_price": 55,
+    "live_price": 109,
+    "commission_rate": 20,
+    "stock": 4000
+  },
+  {
+    "id": "p014",
+    "name": "北欧风陶瓷餐具套装",
+    "brand": "瓷韵",
+    "category": "家居",
+    "supply_price": 48,
+    "live_price": 99,
+    "commission_rate": 18,
+    "stock": 2500
+  },
+  {
+    "id": "p015",
+    "name": "智能香薰机",
+    "brand": "静境",
+    "category": "家居",
+    "supply_price": 62,
+    "live_price": 128,
+    "commission_rate": 22,
+    "stock": 1800
+  },
+  {
+    "id": "p016",
+    "name": "纯棉四件套",
+    "brand": "棉时光",
+    "category": "家居",
+    "supply_price": 85,
+    "live_price": 169,
+    "commission_rate": 20,
+    "stock": 1200
+  },
+  {
+    "id": "p017",
+    "name": "无线蓝牙耳机",
+    "brand": "音享",
+    "category": "数码",
+    "supply_price": 120,
+    "live_price": 249,
+    "commission_rate": 12,
+    "stock": 3000
+  },
+  {
+    "id": "p018",
+    "name": "智能运动手环",
+    "brand": "跃动",
+    "category": "数码",
+    "supply_price": 95,
+    "live_price": 199,
+    "commission_rate": 15,
+    "stock": 2500
+  },
+  {
+    "id": "p019",
+    "name": "便携充电宝20000mAh",
+    "brand": "续航者",
+    "category": "数码",
+    "supply_price": 55,
+    "live_price": 119,
+    "commission_rate": 18,
+    "stock": 5000
+  },
+  {
+    "id": "p020",
+    "name": "高清摄像头",
+    "brand": "视界",
+    "category": "数码",
+    "supply_price": 150,
+    "live_price": 299,
+    "commission_rate": 10,
+    "stock": 1000
+  }
+]
