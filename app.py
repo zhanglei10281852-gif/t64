@@ -144,6 +144,7 @@ class BroadcasterTab(ttk.Frame):
 
     def add_item(self):
         dlg = BroadcasterDialog(self, title="新增主播")
+        self.wait_window(dlg)
         if dlg.result:
             new_id = generate_id("b", self.data_manager.broadcasters)
             dlg.result["id"] = new_id
@@ -159,6 +160,7 @@ class BroadcasterTab(ttk.Frame):
         if not broadcaster:
             return
         dlg = BroadcasterDialog(self, title="编辑主播", data=broadcaster)
+        self.wait_window(dlg)
         if dlg.result:
             for i, b in enumerate(self.data_manager.broadcasters):
                 if b["id"] == bid:
@@ -322,6 +324,7 @@ class ProductTab(ttk.Frame):
 
     def add_item(self):
         dlg = ProductDialog(self, title="新增商品")
+        self.wait_window(dlg)
         if dlg.result:
             new_id = generate_id("p", self.data_manager.products)
             dlg.result["id"] = new_id
@@ -337,6 +340,7 @@ class ProductTab(ttk.Frame):
         if not product:
             return
         dlg = ProductDialog(self, title="编辑商品", data=product)
+        self.wait_window(dlg)
         if dlg.result:
             for i, p in enumerate(self.data_manager.products):
                 if p["id"] == pid:
@@ -559,6 +563,7 @@ class CalendarTab(ttk.Frame):
     def _edit_day(self, day):
         date_str = f"{self.current_year:04d}-{self.current_month:02d}-{day:02d}"
         dlg = ScheduleDayDialog(self, date_str, self.data_manager)
+        self.wait_window(dlg)
         if dlg.modified:
             self._render_calendar()
             self.on_data_change()
@@ -623,6 +628,7 @@ class ScheduleDayDialog(tk.Toplevel):
 
     def _add_schedule(self):
         dlg = ScheduleEditDialog(self, self.data_manager, date_str=self.date_str)
+        self.wait_window(dlg)
         if dlg.result:
             new_id = generate_id("s", self.data_manager.schedules)
             dlg.result["id"] = new_id
@@ -636,6 +642,7 @@ class ScheduleDayDialog(tk.Toplevel):
         if not sched:
             return
         dlg = ScheduleEditDialog(self, self.data_manager, schedule=sched)
+        self.wait_window(dlg)
         if dlg.result:
             for i, s in enumerate(self.data_manager.schedules):
                 if s["id"] == sched["id"]:
@@ -737,6 +744,8 @@ class ScheduleEditDialog(tk.Toplevel):
         ttk.Button(btn_frame, text="确定", command=self._on_ok).pack(side=tk.LEFT, padx=10)
         ttk.Button(btn_frame, text="取消", command=self.destroy).pack(side=tk.LEFT, padx=10)
 
+        if self.broadcaster_names and not self.broadcaster_var.get():
+            self.broadcaster_var.set(self.broadcaster_names[0])
         self._on_bc_change(None)
 
     def _load_schedule(self, schedule):
@@ -884,26 +893,29 @@ class FinanceTab(ttk.Frame):
         summary_frame.pack(fill=tk.X, padx=10, pady=10)
 
         ttk.Label(summary_frame, text="月度汇总", font=("Arial", 10, "bold")).pack(
-            anchor=tk.W, padx=10, pady=(8, 2)
+            anchor=tk.W, padx=10, pady=(8, 5)
         )
 
-        row = ttk.Frame(summary_frame)
-        row.pack(fill=tk.X, padx=10, pady=5)
+        grid_frame = ttk.Frame(summary_frame)
+        grid_frame.pack(fill=tk.X, padx=10, pady=(0, 10))
 
-        ttk.Label(row, text="总坑位费:").pack(side=tk.LEFT)
-        self.total_slot_label = ttk.Label(row, text="0", foreground="#d9534f",
+        ttk.Label(grid_frame, text="总坑位费:").grid(row=0, column=0, sticky=tk.E, padx=(0, 5), pady=3)
+        self.total_slot_label = ttk.Label(grid_frame, text="0", foreground="#d9534f",
                                           font=("Arial", 10, "bold"))
-        self.total_slot_label.pack(side=tk.LEFT, padx=(5, 20))
+        self.total_slot_label.grid(row=0, column=1, sticky=tk.W, pady=3)
 
-        ttk.Label(row, text="总预估佣金:").pack(side=tk.LEFT)
-        self.total_comm_label = ttk.Label(row, text="0", foreground="#5cb85c",
+        ttk.Label(grid_frame, text="总预估佣金:").grid(row=0, column=2, sticky=tk.E, padx=(20, 5), pady=3)
+        self.total_comm_label = ttk.Label(grid_frame, text="0", foreground="#5cb85c",
                                           font=("Arial", 10, "bold"))
-        self.total_comm_label.pack(side=tk.LEFT, padx=(5, 20))
+        self.total_comm_label.grid(row=0, column=3, sticky=tk.W, pady=3)
 
-        ttk.Label(row, text="月总收入:").pack(side=tk.LEFT)
-        self.total_all_label = ttk.Label(row, text="0", foreground="#337ab7",
+        ttk.Label(grid_frame, text="月总收入:").grid(row=1, column=0, sticky=tk.E, padx=(0, 5), pady=(8, 3))
+        self.total_all_label = ttk.Label(grid_frame, text="0", foreground="#337ab7",
                                          font=("Arial", 12, "bold"))
-        self.total_all_label.pack(side=tk.LEFT, padx=5)
+        self.total_all_label.grid(row=1, column=1, columnspan=3, sticky=tk.W, pady=(8, 3))
+
+        grid_frame.grid_columnconfigure(1, weight=1)
+        grid_frame.grid_columnconfigure(3, weight=1)
 
     def _calc_commission_estimate(self, schedule):
         bc = self.data_manager.get_broadcaster_by_id(schedule["broadcaster_id"])
